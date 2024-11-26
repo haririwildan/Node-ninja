@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
@@ -8,10 +10,12 @@ const app = express();
 
 
 // connect to mongodb //
-const dbURI = 'mongodb+srv://wldnhriri:Mongoliach1n4@cluster0.8nu42.mongodb.net/node-ninja?retryWrites=true&w=majority&appName=Cluster0';
+// const dbURI = 'mongodb+srv://wldnhriri:Mongoliach1n4@cluster0.8nu42.mongodb.net/node-ninja?retryWrites=true&w=majority&appName=Cluster0';
 
-mongoose.connect(dbURI)
-    .then((result) => app.listen("https://node-ninja.vercel.app")) // Server aktif setelah koneksi sukses
+mongoose.connect(process.env.MONG_URI)
+    .then(() => app.listen(process.env.PORT, () => {
+        console.log('connected to db and listening port', process.env.PORT);
+    })) // Server aktif setelah koneksi sukses
     .catch((err) => console.log(err));
 
 
