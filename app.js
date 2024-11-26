@@ -4,6 +4,7 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogRoutes');
+const path = require('path');
 
 // express app //
 const app = express();
@@ -18,6 +19,9 @@ mongoose.connect(process.env.MONG_URI)
     })) // Server aktif setelah koneksi sukses
     .catch((err) => console.log(err));
 
+
+    // Atur lokasi folder views
+app.set('views', path.join(__dirname, 'views'));
 
 // register view engine //
 app.set('view engine', 'ejs');
