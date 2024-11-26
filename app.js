@@ -11,7 +11,7 @@ const app = express();
 const dbURI = 'mongodb+srv://wldnhriri:Mongoliach1n4@cluster0.8nu42.mongodb.net/node-ninja?retryWrites=true&w=majority&appName=Cluster0';
 
 mongoose.connect(dbURI)
-    .then((result) => app.listen(3000)) // Server aktif setelah koneksi sukses
+    .then((result) => app.listen("https://node-ninja.vercel.app/")) // Server aktif setelah koneksi sukses
     .catch((err) => console.log(err));
 
 
