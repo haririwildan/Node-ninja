@@ -254,7 +254,7 @@ textarea {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
-        opacity: 0; /* Awalnya transparan */
+        opacity: 0; /* awalnya transparan */
         pointer-events: none; /* tidak dapat diklik jika tidak aktif */
         transition: opacity 0.3s ease; /* tambahkan transisi */
         z-index: 998;
