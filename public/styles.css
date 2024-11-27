@@ -20,18 +20,14 @@ ul {
 
 /* nav & footer styles */
 nav {
-    position: sticky;
-    /* Navbar tetap di atas */
-    top: 0;
-    /* Posisi tetap di bagian atas */
-    z-index: 1000;
-    /* Pastikan navbar berada di atas konten lain */
+    position: sticky; /* navbar tetap di atas */
+    top: 0; /* posisi tetap di bagian atas */
+    z-index: 1000; /* pastikan navbar berada di atas konten lain */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f4f4f4;
-    /* Latar navbar */
+    background-color: #f4f4f4; /* latar navbar */
     border-bottom: 1px solid #ddd;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
@@ -67,8 +63,7 @@ nav ul {
 nav ul li a {
     display: flex;
     align-items: center;
-    gap: 8px;
-    /* Jarak antara ikon dan teks */
+    gap: 8px; /* jarak antara ikon dan teks */
     text-decoration: none;
     color: #555;
     font-size: 1em;
@@ -189,7 +184,7 @@ textarea {
     background: darkred;
 }
 
-/* Mobile Styles */
+/* mobile styles */
 @media (max-width: 600px) {
     body {
         margin: 10px auto;
@@ -197,26 +192,22 @@ textarea {
     }
 
     nav {
-        flex-direction: row;
-        /* Navbar tetap kolom secara default */
+        flex-direction: row; /* navbar tetap kolom secara default */
         align-items: stretch;
         margin-bottom: 40px;
     }
 
     nav .site-title {
         display: flex;
-        justify-content: space-between;
-        /* Sebar elemen ke ujung */
-        width: 100%;
-        /* Lebar penuh */
+        justify-content: space-between; /* sebar elemen ke ujung */
+        width: 100%; /* lebar penuh */
         padding: 10px;
     }
 
     nav ul {
         flex-direction: column;
         width: 100%;
-        display: none;
-        /* Sembunyikan menu di awal */
+        display: none; /* sembunyikan menu di awal */
     }
 
     nav ul li {
@@ -229,42 +220,33 @@ textarea {
         padding: 12px 0;
     }
 
-    /* Navbar Menu Styles with Animation */
+    /* navbar menu styles with animation */
     .nav-list {
-        display: none;
-        /* Default: tidak terlihat */
+        display: none; /* default: tidak terlihat */
         flex-direction: column;
-        gap: 20px;
-        /* Jarak antar item menu */
-        background: #f4f4f4;
-        /* Warna latar menu */
+        gap: 20px; /* jarak antar item menu */
+        background: #f4f4f4; /* Warna latar menu */
         padding: 20px;
         position: absolute;
-        top: 60px;
-        /* Posisi di bawah navbar */
+        top: 60px; /* posisi di bawah navbar */
         right: 0;
         width: 200px;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        opacity: 0;
-        /* Awalnya transparan */
-        transform: translateY(-20px);
-        /* Geser sedikit ke atas */
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        /* Tambahkan transisi */
+        opacity: 0; /* awalnya transparan */
+        transform: translateY(-20px); /* geser sedikit ke atas */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* tambahkan transisi */
         z-index: 999;
     }
 
-    /* Saat menu aktif */
+    /* saat menu aktif */
     .nav-list.active {
         display: flex;
-        opacity: 1;
-        /* Tampilkan menu */
-        transform: translateY(0);
-        /* Geser ke posisi normal */
+        opacity: 1; /* tampilkan menu */
+        transform: translateY(0); /* geser ke posisi normal */
     }
 
-    /* Backdrop Styles with Transition */
+    /* backdrop styles with transition */
     .backdrop {
         position: fixed;
         top: 0;
@@ -272,21 +254,16 @@ textarea {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        /* Awalnya transparan */
-        pointer-events: none;
-        /* Tidak dapat diklik jika tidak aktif */
-        transition: opacity 0.3s ease;
-        /* Tambahkan transisi */
+        opacity: 0; /* Awalnya transparan */
+        pointer-events: none; /* tidak dapat diklik jika tidak aktif */
+        transition: opacity 0.3s ease; /* tambahkan transisi */
         z-index: 998;
     }
 
-    /* Saat menu aktif, backdrop terlihat */
+    /* saat menu aktif, backdrop terlihat  */
     .nav-list.active+.backdrop {
-        opacity: 1;
-        /* Tampilkan backdrop */
-        pointer-events: all;
-        /* Izinkan klik */
+        opacity: 1; /* tampilkan backdrop */
+        pointer-events: all; /* izinkan klik */
     }
 
     .hamburger {
@@ -299,13 +276,11 @@ textarea {
     }
 
     .hamburger i {
-        transition: transform 0.3s ease;
-        /* Animasi untuk ikon */
+        transition: transform 0.3s ease; /* animasi untuk ikon */
     }
 
     .hamburger.active i {
-        transform: rotate(90deg);
-        /* Putar ikon saat aktif */
+        transform: rotate(90deg); /* putar ikon saat aktif */
     }
 
     .content {
@@ -353,8 +328,7 @@ textarea {
 
     .create-blog textarea {
         height: 150px;
-        resize: vertical;
-        /* Allow vertical resizing for better UX */
+        resize: vertical; /* allow vertical resizing for better UX */
     }
 
     .details .delete {
