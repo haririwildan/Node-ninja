@@ -4,11 +4,11 @@ function toggleMenu() {
     const backdrop = document.querySelector('.backdrop');
     const hamburger = document.querySelector('.hamburger');
 
-    // Toggle menu dan backdrop
+    // toggle menu dan backdrop //
     menu.classList.toggle('active');
     backdrop.style.pointerEvents = menu.classList.contains('active') ? 'all' : 'none';
     
-    // Toggle ikon hamburger
+    // toggle ikon hamburger //
     hamburger.classList.toggle('active');
     if (menu.classList.contains('active')) {
         hamburgerIcon.classList.remove('fa-bars');
@@ -19,7 +19,7 @@ function toggleMenu() {
     }
 }
 
-// Tutup menu saat backdrop diklik
+// tutup menu saat backdrop diklik //
 function closeMenu() {
     const menu = document.querySelector('.nav-list');
     const hamburgerIcon = document.querySelector('.hamburger i');
@@ -33,6 +33,6 @@ function closeMenu() {
     hamburgerIcon.classList.add('fa-bars');
 }
 
-// Event listener untuk hamburger dan backdrop
+// event listener untuk hamburger dan backdrop //
 document.querySelector('.hamburger').addEventListener('click', toggleMenu);
 document.querySelector('.backdrop').addEventListener('click', closeMenu);
